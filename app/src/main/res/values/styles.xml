@@ -1,0 +1,35 @@
+<resources>
+
+    <!-- Base application theme. -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.DarkActionBar">
+        <!-- Customize your theme here. -->
+        <item name="colorPrimary">@color/colorPrimary</item>
+        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorAccent">@color/colorAccent</item>
+    </style>
+
+
+    <style name="AppTheme.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <!--     <item name="android:windowIsTranslucent">true</item>-->
+        <item name="windowNoTitle">true</item>
+    </style>
+
+    <!--dialog fragment customized theme-->
+    <style name="MY.DIALOG" parent="Theme.AppCompat" >
+        <item name="android:windowNoTitle">true</item>
+        <item name="android:windowFullscreen">true</item>
+        <item name="android:windowIsFloating">false</item>
+    </style>
+
+    <!--dialog fragment animation theme-->
+    <style name="DialogAnimation">
+        <item name="android:windowEnterAnimation">@anim/fadein_dialog</item>
+        <item name="android:windowExitAnimation">@anim/fadeout_dialog</item>
+    </style>
+
+    <style name="alert_dialog">
+        <item name="android:windowEnterAnimation">@anim/slide_left</item>
+        <item name="android:windowExitAnimation">@anim/slide_right</item>
+    </style>
+</resources>

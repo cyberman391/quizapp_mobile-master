@@ -1,0 +1,475 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ActivityPackage.BuyCoin.BuyCoinActivity">
+
+    <View
+        android:id="@+id/view_top_part"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <ImageButton
+        android:id="@+id/btn_back"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginStart="8dp"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_back"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_part"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_top_part" />
+
+    <ImageView
+        android:layout_width="110dp"
+        android:layout_height="0dp"
+        android:padding="5dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_logo_top_panel"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_part"
+        app:layout_constraintEnd_toStartOf="@id/btn_setting"
+        app:layout_constraintStart_toEndOf="@id/btn_back"
+        app:layout_constraintTop_toTopOf="@id/view_top_part" />
+
+    <ImageButton
+        android:id="@+id/btn_setting"
+        android:layout_width="35dp"
+        android:layout_height="35dp"
+        android:layout_marginEnd="8dp"
+        android:background="@android:color/transparent"
+        android:padding="8dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/ic_setting"
+        app:layout_constraintBottom_toBottomOf="@id/view_top_part"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/view_top_part" />
+
+    <!--end to top part-->
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/view_top_part">
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <TextView
+                android:id="@+id/tv_coin_rate"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Today coin rate"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <View
+                android:id="@+id/view_coin_rate"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@color/color_holo_blue"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_coin_rate" />
+
+
+            <TextView
+                android:id="@+id/tv_inital_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/view_coin_rate"
+                app:layout_constraintEnd_toStartOf="@id/tv_coin_rate_equal"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="@id/view_coin_rate"
+                android:text="1 Coin"/>
+
+
+            <TextView
+                android:id="@+id/tv_coin_rate_equal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="="
+                android:textColor="@color/color_white"
+                android:textSize="22sp"
+                app:layout_constraintBottom_toBottomOf="@id/view_coin_rate"
+                app:layout_constraintEnd_toEndOf="@id/view_coin_rate"
+                app:layout_constraintStart_toStartOf="@id/view_coin_rate"
+                app:layout_constraintTop_toTopOf="@id/view_coin_rate" />
+
+
+            <TextView
+                android:id="@+id/tv_initial_coin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:textColor="@color/color_white"
+                android:textSize="18sp"
+                app:layout_constraintBottom_toBottomOf="@id/view_coin_rate"
+                app:layout_constraintEnd_toEndOf="@id/view_coin_rate"
+                app:layout_constraintStart_toEndOf="@id/tv_coin_rate_equal"
+                app:layout_constraintTop_toTopOf="@id/view_coin_rate"
+                tools:text="1 USD" />
+
+            <View
+                android:id="@+id/view_line"
+                android:layout_width="0dp"
+                android:layout_height="5dp"
+                android:layout_marginTop="16dp"
+                android:background="@drawable/dotted_bg"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_coin_rate" />
+
+            <TextView
+                android:id="@+id/tv_select_coin"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Coin Currency"
+                android:textSize="16sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/view_line" />
+
+            <TextView
+                android:id="@+id/tv_coin_name"
+                android:layout_width="0dp"
+                android:layout_height="50dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/buy_coin_spinner_background"
+                android:gravity="center"
+                android:text="USD"
+                android:textSize="18sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_select_coin">
+
+            </TextView>
+
+
+            <TextView
+                android:id="@+id/tv_coin_amount"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:text="Coin Amount"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_coin_name" />
+
+            <EditText
+                android:id="@+id/et_coin_amount"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="4dp"
+                android:background="@drawable/buy_coin_spinner_background"
+                android:gravity="center"
+                android:inputType="number"
+                android:padding="8dp"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toStartOf="@id/et_coin_price"
+                app:layout_constraintHorizontal_chainStyle="packed"
+                app:layout_constraintStart_toStartOf="@id/tv_coin_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_coin_amount" />
+
+
+            <TextView
+                android:id="@+id/tv_coin_price"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="16dp"
+                android:text="Coin Price"
+                app:layout_constraintBottom_toTopOf="@id/et_coin_price"
+                app:layout_constraintStart_toStartOf="@id/et_coin_price"
+                app:layout_constraintTop_toBottomOf="@id/tv_coin_name" />
+
+            <EditText
+                android:id="@+id/et_coin_price"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="4dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginEnd="16dp"
+                android:background="@drawable/buy_coin_spinner_background"
+                android:editable="false"
+                android:gravity="center"
+                android:inputType="none"
+                android:padding="8dp"
+                android:text="$0"
+                android:textSize="14sp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toEndOf="@id/et_coin_amount"
+                app:layout_constraintTop_toBottomOf="@id/tv_coin_amount" />
+
+            <TextView
+                android:id="@+id/tv_payment_type"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:text="Payment Type"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/et_coin_amount" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycler_view_payment_method"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintHorizontal_bias="0.0"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/tv_payment_type">
+
+            </androidx.recyclerview.widget.RecyclerView>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_paypal_info"
+                android:layout_width="match_parent"
+                android:layout_height="200dp"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_payment_method">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    android:text="Pay with Paypal"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <ImageView
+                    android:layout_width="150dp"
+                    android:layout_height="50dp"
+                    android:background="@drawable/paypal_bg"
+                    android:clickable="true"
+                    android:focusable="true"
+                    android:id="@+id/btn_pay_with_paypal"
+                    android:foreground="?selectableItemBackground"
+                    android:padding="16dp"
+                    android:scaleType="centerCrop"
+                    android:src="@drawable/ic_paypal"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    tools:targetApi="m" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/layout_card_info"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:visibility="gone"
+                app:layout_constraintTop_toBottomOf="@id/recycler_view_payment_method">
+
+                <TextView
+                    android:id="@+id/tv_card_info_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:text="Upload your card information"
+                    android:textStyle="bold"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <TextView
+                    android:id="@+id/tv_card_holder_name"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Card holder name"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_card_info_name" />
+
+                <EditText
+                    android:id="@+id/edit_text_card_holder_name"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/buy_coin_spinner_background"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_card_holder_name"
+                    tools:text="Al Mujahid Khan" />
+
+
+                <TextView
+                    android:id="@+id/tv_card_number"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Card Number"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_text_card_holder_name" />
+
+                <EditText
+                    android:id="@+id/edit_text_card_number"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/buy_coin_spinner_background"
+                    android:inputType="numberSigned"
+                    android:padding="8dp"
+                    android:singleLine="true"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_card_number"
+                    tools:text="56563265656" />
+
+                <TextView
+                    android:id="@+id/tv_expiry_date"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="16dp"
+                    android:text="Expire Date"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edit_text_card_number" />
+
+                <LinearLayout
+                    android:id="@+id/et_expire_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="4dp"
+                    android:orientation="horizontal"
+                    app:layout_constraintEnd_toStartOf="@id/et_cvc"
+                    app:layout_constraintHorizontal_chainStyle="packed"
+                    app:layout_constraintStart_toStartOf="@id/tv_expiry_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_expiry_date">
+
+                    <EditText
+                        android:id="@+id/et_month"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/buy_coin_spinner_background"
+                        android:gravity="center"
+                        android:hint="Month"
+                        android:inputType="numberSigned"
+                        android:maxLength="2"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/et_expire_date"
+                        app:layout_constraintTop_toBottomOf="@id/tv_cvc" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_marginStart="5dp"
+                        android:layout_marginEnd="5dp"
+                        android:text="/"
+                        android:textSize="18sp" />
+
+                    <EditText
+                        android:id="@+id/et_year"
+                        android:layout_width="0dp"
+                        android:layout_height="wrap_content"
+                        android:layout_weight="1"
+                        android:background="@drawable/buy_coin_spinner_background"
+                        android:gravity="center"
+                        android:hint="Year"
+                        android:inputType="numberSigned"
+                        android:maxLength="4"
+                        android:padding="8dp"
+                        android:text=""
+                        android:textSize="14sp"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:layout_constraintStart_toEndOf="@id/et_expire_date"
+                        app:layout_constraintTop_toBottomOf="@id/tv_cvc" />
+
+                </LinearLayout>
+
+                <TextView
+                    android:id="@+id/tv_cvc"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="16dp"
+                    android:text="CVC Number"
+                    app:layout_constraintBottom_toTopOf="@id/et_cvc"
+                    app:layout_constraintStart_toStartOf="@id/et_cvc"
+                    app:layout_constraintTop_toBottomOf="@id/edit_text_card_number" />
+
+                <EditText
+                    android:id="@+id/et_cvc"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="4dp"
+                    android:layout_marginTop="8dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/buy_coin_spinner_background"
+                    android:gravity="center"
+                    android:inputType="numberSigned"
+                    android:padding="8dp"
+                    android:text=""
+                    android:maxLength="4"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toEndOf="@id/et_expire_date"
+                    app:layout_constraintTop_toBottomOf="@id/tv_cvc" />
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.appcompat.widget.AppCompatButton
+                android:id="@+id/btn_buy_coin"
+                android:layout_width="0dp"
+                android:layout_height="45dp"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="16dp"
+                android:layout_marginEnd="16dp"
+                android:layout_marginBottom="16dp"
+                android:background="@drawable/gradient_sky_blue"
+                android:text="Buy coin"
+                android:textColor="@color/color_white"
+                android:visibility="gone"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/layout_card_info" />
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

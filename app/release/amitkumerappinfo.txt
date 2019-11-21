@@ -1,0 +1,6 @@
+jks name: amitkumer.jks
+password: 123456
+alias: kumer
+
+app build version code: 1
+app build version name: 1.1

@@ -1,0 +1,47 @@
+<resources>
+
+    <!--all string resources for this app-->
+    <string name="app_name">QuizestApp</string>
+    <string name="splash_dummy_title">Are you looking for enhance your IQ knowledge? Then Quizest for you</string>
+    <string name="splash_dummy_desc">You can play quiz through multiple categories, we are offering the latest questions to test our IQ and also this app offer you so many cools features. Let\'s explore! </string>
+
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+
+    <string name="warning_no_internet">No Internet, Try Again Later!</string>
+
+    <string name="email">Email</string>
+    <string name="name">User Name</string>
+    <string name="password">Password</string>
+    <string name="confirm_password">Confirm Password</string>
+    <string name="phone">Phone</string>
+    <string name="connection_timeout">Connection Problem, Try Again Later!</string>
+    <string name="password_not_match">Password And Confirm Password doesn\'t match!</string>
+    <string name="no_internet">No Internet, Try again Later!</string>
+    <string name="no_data_found">Data Not Found!</string>
+    <!--Admob app id, replace with your own app id-->
+
+    <string name="admob_id">ca-app-pub-5083409727755927~3486942698</string>
+
+    <!--facebook id information-->
+    <string name="facebook_app_id">416307109244215</string>
+    <string name="fb_login_protocol_scheme">fb416307109244215</string>
+
+    <string-array name="facebook_login_permissions">
+        <item>email</item>
+        <item>public_profile</item>
+    </string-array>
+
+    <!--Admob banner ad id, replace with your own ad unit id-->
+    <string name="admob_banner_id">ca-app-pub-5083409727755927/2165234113</string>
+    <string name="default_notification_channel_id" translatable="false">fcm_default_channel</string>
+    <string name="by_playing_quiz">* By playing quiz, you can get the coin that is set from the admin for the quiz</string>
+    <string name="terms_conditions"><![CDATA[Terms & Conditions]]></string>
+    <string name="someting_wrong">Something went wrong!</string>
+
+    <string-array name="test">
+        <item>Coin 1</item>
+        <item>Coin 2</item>
+        <item>Coin 3</item>
+    </string-array>
+</resources>

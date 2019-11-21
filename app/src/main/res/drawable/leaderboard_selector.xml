@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+    <item android:drawable="@drawable/leaderborad_white_bg" android:state_checked="false" />
+    <item android:drawable="@drawable/leaderborad_bluebg" android:state_checked="true" />
+</selector>
